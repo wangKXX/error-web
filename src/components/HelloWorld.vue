@@ -83,6 +83,7 @@
         >
       </li>
     </ul>
+    <button @click="click">test</button>
   </div>
 </template>
 
@@ -92,6 +93,16 @@ export default {
   props: {
     msg: String,
   },
+  methods: {
+    click() {
+      const a = null;
+      console.log(a.b);
+    },
+  },
+  // created() {
+  //   const a = null;
+  //   console.log(a.b);
+  // }
 };
 </script>
 
