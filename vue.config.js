@@ -1,5 +1,15 @@
-const path = require("path");
+const uploadMapFilePlugin = require("./plugin");
 
 module.exports = {
-  outputDir: path.join(__dirname, "../error-service/public"),
+  configureWebpack: {
+    plugins: [
+      new uploadMapFilePlugin({
+        uploadUrl: "http://localhost:7001/api/upload",
+        params: {
+          a: "5",
+          b: "6",
+        },
+      }),
+    ],
+  },
 };
