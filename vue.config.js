@@ -1,4 +1,4 @@
-const uploadMapFilePlugin = require("./plugin");
+const uploadMapFilePlugin = require("upload-source-map-plugin");
 
 module.exports = {
   configureWebpack: {
