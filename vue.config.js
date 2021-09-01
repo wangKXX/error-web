@@ -1,15 +1,8 @@
-const uploadMapFilePlugin = require("upload-source-map-plugin");
+const zipDirectoryPlugin = require("./plugin");
+const testPlugin = require("./test");
 
 module.exports = {
   configureWebpack: {
-    plugins: [
-      new uploadMapFilePlugin({
-        uploadUrl: "http://localhost:7001/api/upload",
-        params: {
-          a: "5",
-          b: "6",
-        },
-      }),
-    ],
+    plugins: [new zipDirectoryPlugin(), new testPlugin()],
   },
 };
